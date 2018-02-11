@@ -28,7 +28,9 @@ class App extends Component {
     return (
       <div>
         <CartCounter count={this.state.cart.length} />
-        <Shop addToCart={this.addToCart} />      
+        <Shop 
+          addToCart={this.addToCart}
+          cart={this.state.cart} />      
       </div>
     );
   }
