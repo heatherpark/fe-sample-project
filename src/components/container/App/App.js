@@ -9,19 +9,25 @@ class App extends Component {
     super(props);
 
     this.state = {
-      cart: []
+      cart: {}
     };
 
     this.addToCart = this.addToCart.bind(this);
   }
 
   addToCart(e, product) {
+    let id = Math.ceil(Math.random() * 1000);
+    
     this.setState({
-      cart: [
+      cart: {
         ...this.state.cart,
-        product
-      ]
+        [id]: product
+      }
     });
+  }
+
+  removeFromCart(e, product) {
+    
   }
 
   render() {
