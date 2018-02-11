@@ -10,10 +10,17 @@ class App extends Component {
     this.state = {
       cart: []
     };
+
+    this.addToCart = this.addToCart.bind(this);
   }
 
   addToCart(e, product) {
-    console.log('clicked: ', product);
+    this.setState({
+      cart: [
+        ...this.state.cart,
+        product
+      ]
+    });
   }
 
   render() {
