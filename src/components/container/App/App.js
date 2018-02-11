@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Shop from '../../presentational/Shop';
+import { Shop } from '../index';
 
 
 class App extends Component {
