@@ -1,4 +1,4 @@
-{
+export default {
   "products": [
     {
       "filename": "618328744.png",
@@ -56,4 +56,4 @@
       "name": "Longsleeve workout shirt"
     }
   ]
-}
+};
