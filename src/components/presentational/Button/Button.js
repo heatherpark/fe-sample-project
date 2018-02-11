@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Button(props) {
   return (
-    <a href="#" class="btn">
+    <a href="#" className="btn">
       {props.children}
     </a>
   );
