@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Shop } from '../index';
+import { CartCounter } from '../index';
 
 
 class App extends Component {
@@ -26,6 +27,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <CartCounter count={this.state.cart.length} />
         <Shop addToCart={this.addToCart} />      
       </div>
     );
