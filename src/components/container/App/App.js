@@ -12,10 +12,14 @@ class App extends Component {
     };
   }
 
+  addToCart(e, product) {
+    console.log('clicked: ', product);
+  }
+
   render() {
     return (
       <div>
-        <Shop />      
+        <Shop addToCart={this.addToCart} />      
       </div>
     );
   }
