@@ -1,10 +1,12 @@
 import React from 'react';
+import { CartItem } from '../index';
 
 export default function Cart({ cart }) {
-  console.log(cart);
   return (
     <div>
-      
+      {cart.map(item => {
+        return <CartItem item={item} />
+      })}
     </div>
   );
 }
