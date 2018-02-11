@@ -1,5 +1,4 @@
-export default {
-  "products": [
+export default [
     {
       "filename": "618328744.png",
       "price": 5127,
@@ -56,4 +55,3 @@ export default {
       "name": "Longsleeve workout shirt"
     }
   ]
-};
