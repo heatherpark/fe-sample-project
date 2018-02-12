@@ -9,14 +9,20 @@ export default function Cart(props) {
 
   return (
     <div className="cart overlay">
-      <div className="cart-contents"> 
-        Total: ${total}
-        {props.cart.map(item => {
-          return (
-            <CartItem item={item}
-            removeFromCart={props.removeFromCart} />
-          );
-        })}
+      <div className="cart-content"> 
+        <h2>Your Cart</h2>
+        <div className="cart-items">
+          {props.cart.map(item => {
+            return (
+              <CartItem item={item}
+              removeFromCart={props.removeFromCart} />
+            );
+          })}
+        </div>
+        <hr />
+        <div className="cart-total">
+          <span>Total</span> <span>${total}</span>
+        </div>
       </div>
     </div>
   );

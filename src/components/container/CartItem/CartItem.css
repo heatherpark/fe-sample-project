@@ -1,0 +1,33 @@
+.cart-item .centered-and-cropped {
+  object-fit: cover;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #AAAAAA;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.cart-item-text {
+  text-align: right;
+}
+
+.cart-item-name {
+  font-size: 0.9em;
+}
+
+.cart-item-price {
+  font-size: 1.1em;
+}
+
+.cart-item .delete {
+  font-size: 0.5em;
+  background-color: #AAAAAA;
+  border-radius: 50%;
+  padding: 2px;
+  color: #FFF;
+  cursor: pointer;
+}
