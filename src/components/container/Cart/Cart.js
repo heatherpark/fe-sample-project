@@ -24,8 +24,8 @@ export default function Cart(props) {
         <div className="cart-total">
           <span>Total</span> <span>${total}</span>
         </div>
-        <div className="back-button-container" onClick={e => props.toggleCart(e, false)}>
-          <Button>Back</Button>
+        <div className="back-button-container">
+          <Button clickHandler={e => props.toggleCart(e, false)}>Back</Button>
         </div>
       </div>
     </div>

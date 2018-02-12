@@ -15,8 +15,8 @@ export default function ProductOverview({ addToCart, product }) {
           <br />
           <span className="product-price">${product.price}</span>
         </div>
-        <div onClick={e => addToCart(e, product)}>
-          <Button>Add to cart</Button>
+        <div>
+          <Button clickHandler={e => addToCart(e, product)}>Add to cart</Button>
         </div>
       </div>
     </div>

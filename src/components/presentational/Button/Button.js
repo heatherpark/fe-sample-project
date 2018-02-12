@@ -3,7 +3,10 @@ import './Button.css';
 
 export default function Button(props) {
   return (
-    <a href="javascipt:void(0);" className="button">
+    <a
+      onClick={props.clickHandler}
+      href="javascipt:void(0);"
+      className="button">
       {props.children}
     </a>
   );
