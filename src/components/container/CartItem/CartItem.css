@@ -19,7 +19,7 @@
   font-size: 0.9em;
 }
 
-.cart-item-price {
+.cart-item .formatted-price {
   font-size: 1.1em;
 }
 

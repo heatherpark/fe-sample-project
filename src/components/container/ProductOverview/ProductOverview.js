@@ -1,6 +1,7 @@
 import React from 'react';
-import '\./ProductOverview.css';
+import './ProductOverview.css';
 import { Button } from '../../presentational';
+import { PriceFormatter } from '../../presentational';
 
 export default function ProductOverview({ addToCart, product }) {
   return(
@@ -13,7 +14,10 @@ export default function ProductOverview({ addToCart, product }) {
         <div className="overview-text">
           <span className="product-name">{product.name}</span>
           <br />
-          <span className="product-price">${product.price}</span>
+          <PriceFormatter
+            currencySymbol="$">
+            {product.price}
+          </PriceFormatter>
         </div>
         <div>
           <Button clickHandler={e => addToCart(e, product)}>Add to cart</Button>

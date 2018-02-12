@@ -1,5 +1,6 @@
 import React from 'react';
 import './CartItem.css';
+import { PriceFormatter } from '../../presentational';
 
 export default function CartItem(props) {
   return (
@@ -16,7 +17,10 @@ export default function CartItem(props) {
           className="fa fa-times delete"
           aria-hidden="true"></i>
         <br />
-        <span className="cart-item-price">${props.item.price}</span>
+        <PriceFormatter
+            currencySymbol="$">
+            {props.item.price}
+          </PriceFormatter>
       </div>
     </div>
   );

@@ -4,15 +4,6 @@ import './Shop.css';
 import { ProductOverview } from '../index';
 import { Cart } from '../index';
 
-let updatedProductData = products.map(product => {
-  let convertedPrice = (product.price / 100).toFixed(2);
-
-  return {
-    ...product,
-    price: +convertedPrice
-  };
-})
-
 export default function Shop(props) {
   return (
     <div className="shop">
@@ -24,7 +15,7 @@ export default function Shop(props) {
       }
       <h2>Shop our featured collection</h2>
       <div className="row">
-        {updatedProductData.map(product => {
+        {products.map(product => {
           return (
             <ProductOverview
               product={product}
