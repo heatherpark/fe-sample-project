@@ -30,8 +30,16 @@ class App extends Component {
     });
   }
 
-  removeFromCart(e, product) {
-    console.log('removing', product);
+  removeFromCart(e, id) {
+    let updatedCart = this.state.cart.filter(item => {
+      if (item.id !== id) {
+        return item;
+      }
+    });
+
+    this.setState({
+      cart: updatedCart
+    });
   }
 
   render() {
