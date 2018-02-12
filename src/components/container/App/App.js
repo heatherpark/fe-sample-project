@@ -9,25 +9,29 @@ class App extends Component {
     super(props);
 
     this.state = {
-      cart: {}
+      cart: []
     };
 
     this.addToCart = this.addToCart.bind(this);
+    this.removeFromCart = this.removeFromCart.bind(this);
   }
 
   addToCart(e, product) {
     let id = Math.ceil(Math.random() * 1000);
     
     this.setState({
-      cart: {
+      cart: [
         ...this.state.cart,
-        [id]: product
-      }
+        {
+          ...product,
+          id
+        }
+      ]
     });
   }
 
   removeFromCart(e, product) {
-    
+    console.log('removing', product);
   }
 
   render() {
@@ -36,6 +40,7 @@ class App extends Component {
         <CartCounter count={this.state.cart.length} />
         <Shop 
           addToCart={this.addToCart}
+          removeFromCart={this.removeFromCart}
           cart={this.state.cart} />      
       </div>
     );

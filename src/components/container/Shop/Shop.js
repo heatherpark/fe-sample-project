@@ -6,7 +6,9 @@ import { Cart } from '../index';
 export default function Shop(props) {
   return (
     <div>
-      <Cart cart={props.cart} />
+      <Cart
+        cart={props.cart}
+        removeFromCart={props.removeFromCart} />
       {products.map(product => {
         return (
           <CartlyProductOverview
