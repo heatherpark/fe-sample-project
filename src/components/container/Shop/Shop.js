@@ -14,17 +14,19 @@ let updatedProductData = products.map(product => {
 
 export default function Shop(props) {
   return (
-    <div>
+    <div className="container">
       <Cart
         cart={props.cart}
         removeFromCart={props.removeFromCart} />
-      {updatedProductData.map(product => {
-        return (
-          <CartlyProductOverview
-            product={product}
-            addToCart={props.addToCart} />
-        );
-      })}
+      <div className="row">
+        {updatedProductData.map(product => {
+          return (
+            <CartlyProductOverview
+              product={product}
+              addToCart={props.addToCart} />
+          );
+        })}
+      </ div>
     </div>
   );
 }
