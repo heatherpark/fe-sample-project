@@ -14,7 +14,7 @@ let updatedProductData = products.map(product => {
 
 export default function Shop(props) {
   return (
-    <div className="container">
+    <div>
       <Cart
         cart={props.cart}
         removeFromCart={props.removeFromCart} />

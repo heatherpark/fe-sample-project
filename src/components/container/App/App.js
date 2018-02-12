@@ -45,10 +45,12 @@ class App extends Component {
     return (
       <div>
         <NavContainer cartCount={this.state.cart.length} />
-        <Shop 
-          addToCart={this.addToCart}
-          removeFromCart={this.removeFromCart}
-          cart={this.state.cart} />      
+        <div className="container">
+          <Shop 
+            addToCart={this.addToCart}
+            removeFromCart={this.removeFromCart}
+            cart={this.state.cart} />      
+        </div>
       </div>
     );
   }

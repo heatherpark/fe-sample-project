@@ -1,0 +1,18 @@
+.nav-container {
+  background-color: #101BCC;
+}
+
+.nav-container .container {
+  padding: 7px 0;
+  color: #FFF;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-container {
+  float: left;
+}
+
+.cart-count-container {
+  float: right;
+}
