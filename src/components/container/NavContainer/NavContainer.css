@@ -5,6 +5,15 @@
   z-index: 1000;
 }
 
+.nav-container a {
+  color: #FFF;
+}
+
+.nav-container a:hover, 
+.current-page-link {
+  text-decoration: underline;
+}
+
 .nav-container-invisible {
   visibility: hidden;
 }
@@ -20,7 +29,6 @@
 .cart-count-container {
   display: flex;
   justify-content: space-between;
-  cursor: pointer;
 }
 
 .nav-container .counter,

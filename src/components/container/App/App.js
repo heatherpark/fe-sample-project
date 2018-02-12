@@ -55,7 +55,8 @@ class App extends Component {
       <div>
         <NavContainer
           cartCount={this.state.cart.length}
-          toggleCart={this.toggleCart} />
+          toggleCart={this.toggleCart}
+          showCart={this.state.showCart} />
         <div className="container">
           <Shop 
             showCart={this.state.showCart}

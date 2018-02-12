@@ -9,10 +9,11 @@ export default function NavContainer(props) {
       <div className="nav-container">
         <div className="container">
           <Logo />
-          <div
-            onClick={e => props.toggleCart(e, true)}
-            className="cart-count-container">
-            Your Cart
+          <div className="cart-count-container">
+            <a
+              href="javascript:void(0);"
+              className={props.showCart ? "current-page-link" : ""}
+              onClick={e => props.toggleCart(e, true)}>Your Cart</a>
             <CartCounter count={props.cartCount} />
           </div>
         </div>
