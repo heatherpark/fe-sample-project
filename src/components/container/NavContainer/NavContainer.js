@@ -8,7 +8,10 @@ export default function NavContainer(props) {
     <div className="nav-container">
       <div className="container">
         <Logo />
-        <CartCounter count={props.cartCount} />
+        <div className="cart-count-container">
+          Your Cart
+          <CartCounter count={props.cartCount} />
+        </div>
       </div>
     </div>
   );

@@ -9,6 +9,12 @@
   justify-content: space-between;
 }
 
-.counter {
+.cart-count-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-container .counter {
+  margin-left: 8px;
   color: #101BCC;
 }
