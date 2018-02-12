@@ -35,6 +35,7 @@
 .cart-total {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .cart-items {
@@ -44,4 +45,8 @@
 .cart hr {
   background-color: #5F5F5F;
   height: 1px;
+}
+
+.back-button-container {
+  text-align: center;
 }
