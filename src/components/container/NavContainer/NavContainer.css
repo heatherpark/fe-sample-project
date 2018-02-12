@@ -20,6 +20,7 @@
 .cart-count-container {
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .nav-container .counter,

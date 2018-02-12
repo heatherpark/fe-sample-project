@@ -8,11 +8,13 @@ class App extends Component {
     super(props);
 
     this.state = {
-      cart: []
+      cart: [],
+      showCart: false
     };
 
     this.addToCart = this.addToCart.bind(this);
     this.removeFromCart = this.removeFromCart.bind(this);
+    this.toggleCart = this.toggleCart.bind(this);
   }
 
   addToCart(e, product) {
@@ -41,15 +43,26 @@ class App extends Component {
     });
   }
 
+  toggleCart(e, show) {
+    this.setState({
+      ...this.state,
+      showCart: show
+    });
+  }
+
   render() {
     return (
       <div>
-        <NavContainer cartCount={this.state.cart.length} />
+        <NavContainer
+          cartCount={this.state.cart.length}
+          toggleCart={this.toggleCart} />
         <div className="container">
           <Shop 
+            showCart={this.state.showCart}
             addToCart={this.addToCart}
             removeFromCart={this.removeFromCart}
-            cart={this.state.cart} />      
+            cart={this.state.cart}
+            toggleCart={this.toggleCart} />      
         </div>
       </div>
     );

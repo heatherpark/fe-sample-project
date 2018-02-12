@@ -1,6 +1,7 @@
 import React from 'react';
 import './Cart.css';
 import { CartItem } from '../index';
+import { Button } from '../../presentational';
 
 export default function Cart(props) {
   let total = props.cart.reduce((total, item)=> {
@@ -23,6 +24,9 @@ export default function Cart(props) {
         <div className="cart-total">
           <span>Total</span> <span>${total}</span>
         </div>
+          <div onClick={e => props.toggleCart(e, false)}>
+            <Button>Back</Button>
+          </div>
       </div>
     </div>
   );

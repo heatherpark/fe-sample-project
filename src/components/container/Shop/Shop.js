@@ -1,5 +1,6 @@
 import React from 'react';
 import products from '../../../data/product-payload';
+import './Shop.css';
 import { CartlyProductOverview } from '../index';
 import { Cart } from '../index';
 
@@ -14,10 +15,14 @@ let updatedProductData = products.map(product => {
 
 export default function Shop(props) {
   return (
-    <div>
-      <Cart
-        cart={props.cart}
-        removeFromCart={props.removeFromCart} />
+    <div className="shop">
+      {props.showCart && 
+        <Cart
+          cart={props.cart}
+          removeFromCart={props.removeFromCart}
+          toggleCart={props.toggleCart} />
+      }
+      <h2>Shop our featured collection</h2>
       <div className="row">
         {updatedProductData.map(product => {
           return (
