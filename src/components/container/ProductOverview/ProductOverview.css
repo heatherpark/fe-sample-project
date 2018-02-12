@@ -7,6 +7,10 @@
   margin-bottom: 1.5em;
 }
 
+.product-overview:hover {
+  border: solid 1px #101BCC;
+}
+
 .product-overview img {
   margin-bottom: 0.7em;
   border-radius: 3px 3px 0 0;
@@ -22,4 +26,9 @@
 
 .product-price {
   font-size: 1.1em;
+}
+
+.product-overview .button:hover {
+  border: solid 1px #101BCC;
+  color: #101BCC;
 }
