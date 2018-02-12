@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Shop } from '../index';
 import { CartCounter } from '../index';
-
+import { NavContainer } from '../index';
 
 class App extends Component {
   constructor(props) {
@@ -45,6 +45,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <NavContainer />
         <CartCounter count={this.state.cart.length} />
         <Shop 
           addToCart={this.addToCart}

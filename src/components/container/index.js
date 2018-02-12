@@ -3,3 +3,4 @@ export { default as CartlyProductOverview } from './CartlyProductOverview/Cartly
 export { default as CartCounter } from './CartCounter/CartCounter';
 export { default as Cart } from './Cart/Cart';
 export { default as CartItem } from './CartItem/CartItem';
+export { default as NavContainer } from './NavContainer/NavContainer';
