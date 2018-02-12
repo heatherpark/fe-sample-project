@@ -26,7 +26,7 @@ export default function Shop(props) {
               addToCart={props.addToCart} />
           );
         })}
-      </ div>
+      </div>
     </div>
   );
 }
