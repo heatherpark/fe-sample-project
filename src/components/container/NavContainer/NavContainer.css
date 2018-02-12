@@ -9,10 +9,6 @@
   justify-content: space-between;
 }
 
-.logo-container {
-  float: left;
-}
-
-.cart-count-container {
-  float: right;
+.counter {
+  color: #101BCC;
 }

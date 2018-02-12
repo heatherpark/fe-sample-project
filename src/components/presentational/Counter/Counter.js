@@ -1,8 +1,9 @@
 import React from 'react';
+import './Counter.css';
 
 export default function Counter(props) {
   return (
-    <div>
+    <div className="counter">
       {props.count}
     </div>
   );
