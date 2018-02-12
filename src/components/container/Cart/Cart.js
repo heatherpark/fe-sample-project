@@ -1,4 +1,5 @@
 import React from 'react';
+import './Cart.css';
 import { CartItem } from '../index';
 
 export default function Cart(props) {
@@ -7,14 +8,16 @@ export default function Cart(props) {
   }, 0);
 
   return (
-    <div>
-      Total: ${total}
-      {props.cart.map(item => {
-        return (
-          <CartItem item={item}
-          removeFromCart={props.removeFromCart} />
-        );
-      })}
+    <div className="cart overlay">
+      <div className="cart-contents"> 
+        Total: ${total}
+        {props.cart.map(item => {
+          return (
+            <CartItem item={item}
+            removeFromCart={props.removeFromCart} />
+          );
+        })}
+      </div>
     </div>
   );
 }
