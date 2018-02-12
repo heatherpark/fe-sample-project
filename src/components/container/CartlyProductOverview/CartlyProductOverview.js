@@ -8,7 +8,7 @@ export default function CartlyProductOverview({ addToCart, product }) {
       <ProductOverview>
         <img src={`images/${product.filename}`} alt={product.name}/>
         <p>{product.name}</p>
-        <p>{product.price}</p>
+        <p>${product.price}</p>
         <div onClick={e => addToCart(e, product)}>
           <Button>Add to cart</Button>
         </div>

@@ -8,7 +8,7 @@ let updatedProductData = products.map(product => {
 
   return {
     ...product,
-    price: `$${convertedPrice}`
+    price: convertedPrice
   };
 })
 
