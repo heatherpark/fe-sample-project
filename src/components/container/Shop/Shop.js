@@ -1,7 +1,7 @@
 import React from 'react';
 import products from '../../../data/product-payload';
 import './Shop.css';
-import { CartlyProductOverview } from '../index';
+import { ProductOverview } from '../index';
 import { Cart } from '../index';
 
 let updatedProductData = products.map(product => {
@@ -26,7 +26,7 @@ export default function Shop(props) {
       <div className="row">
         {updatedProductData.map(product => {
           return (
-            <CartlyProductOverview
+            <ProductOverview
               product={product}
               addToCart={props.addToCart} />
           );
