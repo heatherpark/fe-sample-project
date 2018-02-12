@@ -2,6 +2,7 @@
   font-weight: 900;
   font-size: 1.2em;
   letter-spacing: 0.02em;
+  display: inline-block;
 }
 
 .logo i {

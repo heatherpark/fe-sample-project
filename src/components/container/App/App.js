@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Shop } from '../index';
 import { NavContainer } from '../index';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 class App extends Component {
   constructor(props) {
@@ -52,20 +53,29 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <NavContainer
-          cartCount={this.state.cart.length}
-          toggleCart={this.toggleCart}
-          showCart={this.state.showCart} />
-        <div className="container">
-          <Shop 
-            showCart={this.state.showCart}
-            addToCart={this.addToCart}
-            removeFromCart={this.removeFromCart}
-            cart={this.state.cart}
-            toggleCart={this.toggleCart} />      
+      <BrowserRouter>
+        <div>
+          <NavContainer
+            cartCount={this.state.cart.length}
+            toggleCart={this.toggleCart}
+            showCart={this.state.showCart} />
+          <div className="container">
+              <Route 
+                path="/shop" 
+                render={routeProps => {
+                  return (
+                    <Shop
+                      {...routeProps}
+                      showCart={this.state.showCart}
+                      addToCart={this.addToCart}
+                      removeFromCart={this.removeFromCart}
+                      cart={this.state.cart}
+                      toggleCart={this.toggleCart} />
+                  );
+                }} />
+          </div>
         </div>
-      </div>
+      </BrowserRouter>
     );
   }
 }

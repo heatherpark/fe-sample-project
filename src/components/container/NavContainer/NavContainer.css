@@ -9,6 +9,10 @@
   color: #FFF;
 }
 
+.nav-container .logo {
+  margin-right: 25px;
+}
+
 .nav-container a:hover, 
 .current-page-link {
   text-decoration: underline;
