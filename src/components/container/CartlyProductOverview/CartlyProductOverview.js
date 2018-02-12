@@ -12,10 +12,11 @@ export default function CartlyProductOverview({ addToCart, product }) {
             className="img-responsive"
             src={`images/${product.filename}`}
             alt={product.name}/>
-          <br />
-          <span className="product-name">{product.name}</span>
-          <br />
-          <span className="product-price">${product.price}</span>
+          <div className="overview-text">
+            <span className="product-name">{product.name}</span>
+            <br />
+            <span className="product-price">${product.price}</span>
+          </div>
           <div onClick={e => addToCart(e, product)}>
             <Button>Add to cart</Button>
           </div>

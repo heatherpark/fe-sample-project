@@ -1,6 +1,9 @@
-body {
+body, a, p {
   margin: 0;
   padding: 0;
+}
+
+body {
   font-family: 'Lato', sans-serif;
   font-size: 1em;
   color: #5F5F5F;
@@ -8,4 +11,12 @@ body {
 
 .img-responsive {
   width: 100%;
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+  color: #5F5F5F;
+  text-decoration: none;
 }
