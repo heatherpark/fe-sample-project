@@ -52,6 +52,8 @@ class App extends Component {
   }
 
   render() {
+    let deployPath = 'fe-sample-project';
+
     return (
       <BrowserRouter>
         <div>
@@ -60,19 +62,22 @@ class App extends Component {
             toggleCart={this.toggleCart}
             showCart={this.state.showCart} />
           <div className="container">
-              <Route 
-                path="/shop" 
-                render={routeProps => {
-                  return (
-                    <Shop
-                      {...routeProps}
-                      showCart={this.state.showCart}
-                      addToCart={this.addToCart}
-                      removeFromCart={this.removeFromCart}
-                      cart={this.state.cart}
-                      toggleCart={this.toggleCart} />
-                  );
-                }} />
+            <Route exact path={`/${deployPath}`} render={() => (
+                <Redirect to={`/${deployPath}/shop`}/>
+            )}/>
+            <Route 
+              path={`/${deployPath}/shop`} 
+              render={routeProps => {
+                return (
+                  <Shop
+                    {...routeProps}
+                    showCart={this.state.showCart}
+                    addToCart={this.addToCart}
+                    removeFromCart={this.removeFromCart}
+                    cart={this.state.cart}
+                    toggleCart={this.toggleCart} />
+                );
+              }} />
           </div>
         </div>
       </BrowserRouter>
