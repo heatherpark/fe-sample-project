@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Shop } from '../index';
 import { NavContainer } from '../index';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 class App extends Component {
   constructor(props) {
